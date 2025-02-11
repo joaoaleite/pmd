@@ -37,7 +37,9 @@ nltk.download("punkt")
 nltk.download("punkt_tab")
 
 # %%
-df = pd.read_json("datasets/raw/climate-fever-dataset-r1.jsonl", lines=True, orient="records")
+df = pd.read_json(
+    "datasets/raw/climate-fever-dataset-r1.jsonl", lines=True, orient="records"
+)
 df = df[(df["claim_label"] == "REFUTES") | (df["claim_label"] == "SUPPORTS")]
 
 df["claim_label"] = df["claim_label"].map({"REFUTES": 1, "SUPPORTS": 0})
@@ -72,7 +74,9 @@ df = df[["id_article", "id_sentence", "text", "label"]]
 df = df[df["text"].apply(clean)].reset_index(drop=True)
 df.to_csv("datasets/normalised/cidii.csv", index=False)
 
-paths = [f"datasets/raw/Constraint_English_{split}.csv" for split in ["Train", "Test", "Val"]]
+paths = [
+    f"datasets/raw/Constraint_English_{split}.csv" for split in ["Train", "Test", "Val"]
+]
 dfs = [pd.read_csv(path) for path in paths]
 for df in dfs:
     df["label"] = df["label"].map({"real": 0, "fake": 1})
