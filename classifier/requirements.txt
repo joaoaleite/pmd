@@ -7,9 +7,9 @@ torch==2.5.0
 numpy==1.26.4
 accelerate==1.0.1
 pyparsing==3.1.2
-python-dotenv==1.0.1
-pytorch-lightning==2.4.0
 tqdm==4.66.5
 spacy==3.7.2
 en-core-web-trf==3.5.0
+requests==2.32.2
+python-dotenv==1.0.1
 spacy[cuda113]
