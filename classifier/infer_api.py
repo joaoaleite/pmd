@@ -39,10 +39,9 @@ if __name__ == "__main__":
 
     os.makedirs("datasets/processed", exist_ok=True)
     for name, df in datasets.items():
-        df = df.sample(n=5)
         print(f"\nProcessing {name} dataset...")
         processed_df = run_inference(df)
-        # Save processed dataset
+
         output_path = f"datasets/processed/api_{name}.csv"
         processed_df.to_csv(output_path, index=False)
         print(f"Saved processed {name} dataset to {output_path}")
