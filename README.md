@@ -2,6 +2,8 @@
 
 This repository contains the experiments and supplementary material to our research paper published at The Web Conf (WWW) 2025.
 
+Paper: https://dl.acm.org/doi/abs/10.1145/3701716.3715535
+
 ## Install dependencies
 ```bash
 conda create -n pmd python=3.9
