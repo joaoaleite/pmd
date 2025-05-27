@@ -37,6 +37,6 @@ pages = {1100–1103},
 numpages = {4},
 keywords = {disinformation, domain adaptation, persuasion techniques},
 location = {Sydney NSW, Australia},
-```
 series = {WWW '25}
 }
+```
